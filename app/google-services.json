@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1086623666402",
+    "firebase_url": "https://startups-a1111.firebaseio.com",
+    "project_id": "startups-a1111",
+    "storage_bucket": "startups-a1111.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086623666402:android:a7565a18e4c63a7c",
+        "android_client_info": {
+          "package_name": "com.gov.startups"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086623666402-mksjrd2v995d7mktmgcc5iok1vpucjlt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gov.startups",
+            "certificate_hash": "29047177713eaca8c6328ab411992f81ec8f95f5"
+          }
+        },
+        {
+          "client_id": "1086623666402-42s2jabn9bj0eq8gt8t9566sobcnck1n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0lanjqnn2_gli7o-fbcvzUCW4wQrHHs8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086623666402-42s2jabn9bj0eq8gt8t9566sobcnck1n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
