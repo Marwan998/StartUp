@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (view.getTag().toString().equals("gov")) {
             lgn.putExtra("type", 1);
             startActivity(lgn);
-        } else if (view.getTag().toString().equals("sponeser")) {
+        } else if (view.getTag().toString().equals("sponsor")) {
             lgn.putExtra("type", 2);
             startActivity(lgn);
         }
