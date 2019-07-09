@@ -91,6 +91,9 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case 2:
+                Intent intent2 = new Intent(getApplicationContext(),RegisterSponsor.class);
+                startActivity(intent2);
+                break;
         }
     }
 }
