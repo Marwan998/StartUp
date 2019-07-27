@@ -37,12 +37,12 @@ public class Login extends AppCompatActivity {
             tv.setTag(2);
         }
     }
-
+    String path="Companies";
     public void login(View view) {
         EditText et = findViewById(R.id.editText);
         final EditText et2 = findViewById(R.id.editText2);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        String path="Companies";
+
         switch (getIntent().getIntExtra("type",0)){
             case 0:
                 path="Companies";
@@ -69,6 +69,16 @@ public class Login extends AppCompatActivity {
                             String pass = document.getData().get("password")+"";
                             if(et2.getText().toString().equals(pass)){
                                 Toast.makeText(Login.this, "Login successful", Toast.LENGTH_SHORT).show();
+                                switch (path){
+                                    case "Companies":
+                                        break;
+                                    case "Government":
+                                        Intent i = new Intent(getApplicationContext(),GovMain.class);
+                                        startActivity(i);
+                                        break;
+                                    case "Sponsors":
+                                            break;
+                                }
                             }
                             else{
                                 Toast.makeText(Login.this, "Login Failed", Toast.LENGTH_SHORT).show();

@@ -3,4 +3,11 @@
     <string name="governmentbtn">Government</string>
     <string name="sponsorbtn">Sponsor</string>
     <string name="companybtn">Company</string>
+    <string name="company_requests">Company Requests</string>
+    <string name="sponsor_requests">Sponsor Requests</string>
+    <string name="contact_company">Contact Company</string>
+    <string name="contact_sponsor">Contact Sponsor</string>
+    <string name="new_announcement">New Announcement</string>
+    <string name="search_company">Search Company</string>
+    <string name="search_sponsor">Search Sponsor</string>
 </resources>
