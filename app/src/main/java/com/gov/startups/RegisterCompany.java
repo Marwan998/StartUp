@@ -124,7 +124,6 @@ public class RegisterCompany extends AppCompatActivity implements OnClickListene
                 break;
         }
     }
-    
     public void onDestroy()
     {
         super.onDestroy();

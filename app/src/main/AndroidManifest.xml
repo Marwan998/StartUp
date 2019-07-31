@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GovMain"></activity>
+        <activity android:name=".Search"></activity>
+        <activity android:name=".GovMain" />
         <activity android:name=".RegisterSponsor" />
         <activity android:name=".RegisterCompany" />
         <activity android:name=".Login" />
