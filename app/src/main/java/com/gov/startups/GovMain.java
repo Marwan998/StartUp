@@ -31,4 +31,17 @@ public class GovMain extends AppCompatActivity {
         }
         startActivity(intent);
     }
+
+    public void contact(View view) {
+        Intent intent = new Intent(getApplicationContext(),Gov_Messages.class);
+        switch (view.getId()){
+            case R.id.contact_company:
+                intent.putExtra("type",1);
+                break;
+            case R.id.contact_sponsor:
+                intent.putExtra("type",2);
+                break;
+        }
+        startActivity(intent);
+    }
 }
