@@ -73,11 +73,14 @@ public class Login extends AppCompatActivity {
                                     case "Companies":
                                         break;
                                     case "Government":
-                                        Intent i = new Intent(getApplicationContext(),GovMain.class);
-                                        startActivity(i);
+                                        Intent x = new Intent(getApplicationContext(),GovMain.class);
+                                        startActivity(x);
                                         break;
                                     case "Sponsors":
-                                            break;
+                                        Log.d("error_msg","reached here");
+                                        Intent x2 = new Intent(getApplicationContext(),MainSponsor.class);
+                                        startActivity(x2);
+                                        break;
                                 }
                             }
                             else{

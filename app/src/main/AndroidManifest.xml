@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Gov_Messages"></activity>
+        <activity android:name=".MainSponsor"></activity>
+        <activity android:name=".Gov_Messages" />
         <activity android:name=".Search" />
         <activity android:name=".GovMain" />
         <activity android:name=".RegisterSponsor" />
