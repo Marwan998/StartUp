@@ -58,7 +58,6 @@ public class Search extends AppCompatActivity {
                                                 arrayList.add(result);
                                                 ArrayAdapter arrayAdapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, arrayList);
                                                 listView.setAdapter(arrayAdapter);
-                                                Log.d("database_result", document.getId() + " => " + result);
                                             }
                                         }
                                         if(c==0){
