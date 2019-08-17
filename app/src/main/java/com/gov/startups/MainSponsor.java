@@ -19,7 +19,7 @@ public class MainSponsor extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainSponsor.this, searchSponser.class));
+                startActivity(new Intent(MainSponsor.this, searchSponsor.class));
             }
         });
 

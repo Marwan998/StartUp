@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainSponsor"></activity>
+        <activity android:name=".searchSponsor"></activity>
         <activity android:name=".Gov_Messages" />
         <activity android:name=".Search" />
         <activity android:name=".GovMain" />
