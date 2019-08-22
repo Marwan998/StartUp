@@ -29,8 +29,23 @@ public class MainSponsor extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainSponsor.this, contactCompanySpon.class));
+                Intent intent = new Intent(MainSponsor.this,Spon_Messages.class);
+                intent.putExtra("name",getIntent().getStringExtra("name"));
+                intent.putExtra("type",1);
+                startActivity(intent);
             }
         });
+
+        Button btn2 = findViewById(R.id.button7);
+
+         btn2.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 Intent intent = new Intent(MainSponsor.this,Spon_Messages.class);
+                 intent.putExtra("name",getIntent().getStringExtra("name"));
+                 intent.putExtra("type",3);
+                 startActivity(intent);
+             }
+         });
     }
 }

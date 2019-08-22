@@ -40,6 +40,7 @@ public class Login extends AppCompatActivity {
     String path="Companies";
     public void login(View view) {
         EditText et = findViewById(R.id.editText);
+        final String name = et.getText().toString();
         final EditText et2 = findViewById(R.id.editText2);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -56,7 +57,7 @@ public class Login extends AppCompatActivity {
 
         }
         CollectionReference cr = db.collection(path);
-        cr.whereEqualTo("ID",et.getText().toString()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        cr.whereEqualTo("ID",name).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
@@ -79,6 +80,7 @@ public class Login extends AppCompatActivity {
                                     case "Sponsors":
                                         Log.d("error_msg","reached here");
                                         Intent x2 = new Intent(getApplicationContext(),MainSponsor.class);
+                                        x2.putExtra("name",name);
                                         startActivity(x2);
                                         break;
                                 }

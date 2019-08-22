@@ -29,4 +29,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/button5"
         android:text="Contact a company" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button6"
+        android:layout_margin="40sp"
+        android:text="Contact Government" />
 </RelativeLayout>
