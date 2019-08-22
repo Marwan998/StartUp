@@ -47,5 +47,14 @@ public class MainSponsor extends AppCompatActivity {
                  startActivity(intent);
              }
          });
+
+         Button btn3 = findViewById(R.id.button8);
+
+         btn3.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 startActivity(new Intent(MainSponsor.this,seeGovermentAds.class));
+             }
+         });
     }
 }

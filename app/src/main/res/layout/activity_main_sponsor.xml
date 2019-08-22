@@ -16,7 +16,7 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_margin="40sp"
+        android:layout_margin="20px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/sponsor_name"
@@ -24,7 +24,7 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_margin="40sp"
+        android:layout_margin="20px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/button5"
@@ -35,6 +35,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/button6"
-        android:layout_margin="40sp"
+        android:layout_margin="20px"
         android:text="Contact Government" />
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button7"
+        android:layout_margin="20px"
+        android:text="See government ads" />
 </RelativeLayout>

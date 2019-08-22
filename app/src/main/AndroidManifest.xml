@@ -25,6 +25,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Spon_Messages" />
+        <activity android:name=".seeGovermentAds" />
     </application>
 
 </manifest>
