@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainSponsor extends AppCompatActivity {
+public class SponsorMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class MainSponsor extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainSponsor.this, searchSponsor.class));
+                startActivity(new Intent(SponsorMain.this, searchSponsor.class));
             }
         });
 
@@ -29,7 +29,7 @@ public class MainSponsor extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainSponsor.this,Spon_Messages.class);
+                Intent intent = new Intent(SponsorMain.this,Spon_Messages.class);
                 intent.putExtra("name",getIntent().getStringExtra("name"));
                 intent.putExtra("type",1);
                 startActivity(intent);
@@ -41,7 +41,7 @@ public class MainSponsor extends AppCompatActivity {
          btn2.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
-                 Intent intent = new Intent(MainSponsor.this,Spon_Messages.class);
+                 Intent intent = new Intent(SponsorMain.this,Spon_Messages.class);
                  intent.putExtra("name",getIntent().getStringExtra("name"));
                  intent.putExtra("type",3);
                  startActivity(intent);
@@ -53,7 +53,7 @@ public class MainSponsor extends AppCompatActivity {
          btn3.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
-                 startActivity(new Intent(MainSponsor.this,seeGovermentAds.class));
+                 startActivity(new Intent(SponsorMain.this,seeGovermentAds.class));
              }
          });
     }

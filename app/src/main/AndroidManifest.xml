@@ -8,9 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainSponsor"></activity>
-        <activity android:name=".searchSponsor"></activity>
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".StartupMain"></activity>
+        <activity android:name=".SponsorMain" />
+        <activity android:name=".searchSponsor" />
         <activity android:name=".Gov_Messages" />
         <activity android:name=".Search" />
         <activity android:name=".GovMain" />

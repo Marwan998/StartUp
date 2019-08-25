@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainSponsor">
+    tools:context=".SponsorMain">
 
     <TextView
         android:id="@+id/sponsor_name"
@@ -44,4 +44,11 @@
         android:layout_below="@id/button7"
         android:layout_margin="20px"
         android:text="See government ads" />
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button8"
+        android:layout_margin="20px"
+        android:text="Search for company" />
 </RelativeLayout>

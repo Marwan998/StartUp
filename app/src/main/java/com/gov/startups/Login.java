@@ -67,19 +67,21 @@ public class Login extends AppCompatActivity {
                     }
                     else{
                         for (QueryDocumentSnapshot document : task.getResult()) {
-                            String pass = document.getData().get("password")+"";
+                            String pass = document.getData().get("Password")+"";
                             if(et2.getText().toString().equals(pass)){
                                 Toast.makeText(Login.this, "Login successful", Toast.LENGTH_SHORT).show();
                                 switch (path){
                                     case "Companies":
+                                        Intent x0 = new Intent(getApplicationContext(), StartupMain.class);
+                                        x0.putExtra("name",name);
+                                        startActivity(x0);
                                         break;
                                     case "Government":
-                                        Intent x = new Intent(getApplicationContext(),GovMain.class);
-                                        startActivity(x);
+                                        Intent x1 = new Intent(getApplicationContext(),GovMain.class);
+                                        startActivity(x1);
                                         break;
                                     case "Sponsors":
-                                        Log.d("error_msg","reached here");
-                                        Intent x2 = new Intent(getApplicationContext(),MainSponsor.class);
+                                        Intent x2 = new Intent(getApplicationContext(), SponsorMain.class);
                                         x2.putExtra("name",name);
                                         startActivity(x2);
                                         break;
