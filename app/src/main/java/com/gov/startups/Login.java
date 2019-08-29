@@ -4,10 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Display;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,23 +21,40 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import org.w3c.dom.Text;
+
 public class Login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        findViewById(R.id.editText).setZ(2);
+        findViewById(R.id.editText2).setZ(2);
+        findViewById(R.id.register).setZ(2);
+        findViewById(R.id.textView).setZ(2);
+
+        ImageView iv = findViewById(R.id.imageView4);
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        iv.getLayoutParams().height=size.y/2;
+
         Intent i = getIntent();
         if(i.getIntExtra("type",0)==0){
             TextView tv = findViewById(R.id.register);
             tv.setVisibility(View.VISIBLE);
             tv.setTag(1);
+            TextView head =findViewById(R.id.head);
+            head.setText("StartUp");
         }
         else if(i.getIntExtra("type",0)==2){
             TextView tv = findViewById(R.id.register);
-            tv.setText("Register a new sponsor.");
+            tv.setText("Register Sponsor");
             tv.setVisibility(View.VISIBLE);
             tv.setTag(2);
+            TextView head =findViewById(R.id.head);
+            head.setText("Sponsor");
         }
     }
     String path="Companies";
