@@ -7,48 +7,142 @@
     tools:context=".SponsorMain">
 
     <TextView
-        android:id="@+id/sponsor_name"
-        android:layout_width="match_parent"
-        android:layout_height="92dp"
-        android:layout_margin="20sp"
-        android:gravity="center"
-        android:text="Sponsor name " />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_margin="20px"
-        android:layout_width="match_parent"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sponsor_name"
-        android:text="Search for a company"/>
+        android:layout_toRightOf="@id/imageButton"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:text="Sponsor"
+        android:fontFamily="@font/hel"
+        android:textSize="30sp"
+        android:textColor="#E19E08"/>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:srcCompat="@mipmap/back_icon" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Communicate with:"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/imageButton"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="15dp"
+        android:textSize="22sp"/>
+
 
     <Button
         android:id="@+id/button6"
-        android:layout_margin="20px"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/button5"
-        android:text="Contact a company" />
+        android:layout_width="175dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/textView2"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_design"
+        android:fontFamily="@font/hel"
+        android:paddingStart="10dp"
+        android:text="Company"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="175dp"
+        android:layout_height="30dp"
         android:layout_below="@id/button6"
-        android:layout_margin="20px"
-        android:text="Contact Government" />
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_design"
+        android:fontFamily="@font/hel"
+        android:paddingStart="10dp"
+        android:text="Government"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search for:"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/button7"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:textSize="22sp"/>
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="175dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/textView3"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_design"
+        android:fontFamily="@font/hel"
+        android:paddingStart="10dp"
+        android:text="Company"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View:"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/button5"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:textSize="22sp"/>
     <Button
         android:id="@+id/button8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/button7"
-        android:layout_margin="20px"
-        android:text="See government ads" />
+        android:layout_width="175dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/textView4"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_design"
+        android:fontFamily="@font/hel"
+        android:paddingStart="10dp"
+        android:text="Government ads"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="12sp"/>
     <Button
         android:id="@+id/button9"
+        android:layout_width="175dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/button8"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_design"
+        android:fontFamily="@font/hel"
+        android:paddingStart="10dp"
+        android:text="Support requests"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="12sp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button8"
-        android:layout_margin="20px"
-        android:text="Search for company" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitEnd"
+        app:srcCompat="@mipmap/sponsors_background" />
+
 </RelativeLayout>
