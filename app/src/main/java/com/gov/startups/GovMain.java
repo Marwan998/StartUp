@@ -74,4 +74,7 @@ public class GovMain extends AppCompatActivity {
             }
         },500);
     }
+    public void back(View view) {
+        finish();
+    }
 }

@@ -42,6 +42,7 @@
         android:layout_marginStart="15dp"
         android:background="@null"
         android:scaleType="fitCenter"
+        android:onClick="back"
         app:srcCompat="@mipmap/back_icon" />
     <TextView
         android:id="@+id/textView2"

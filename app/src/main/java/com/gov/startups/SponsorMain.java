@@ -105,4 +105,7 @@ public class SponsorMain extends AppCompatActivity {
              }
          });
     }
+    public void back(View view) {
+        finish();
+    }
 }

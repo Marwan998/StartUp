@@ -30,7 +30,8 @@
         android:layout_marginStart="15dp"
         android:background="@null"
         android:scaleType="fitCenter"
-        app:srcCompat="@mipmap/back_icon" />
+        app:srcCompat="@mipmap/back_icon"
+        android:onClick="back"/>
 
     <TextView
         android:id="@+id/textView"

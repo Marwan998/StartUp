@@ -37,4 +37,7 @@ public class StartupMain extends AppCompatActivity {
             }
         },500);
     }
+    public void back(View view) {
+        finish();
+    }
 }

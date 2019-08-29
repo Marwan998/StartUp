@@ -133,4 +133,8 @@ public class Login extends AppCompatActivity {
                 break;
         }
     }
+
+    public void back(View view) {
+        finish();
+    }
 }
