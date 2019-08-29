@@ -2,7 +2,7 @@
     <string name="app_name">StartUps</string>
     <string name="governmentbtn">Government</string>
     <string name="sponsorbtn">Sponsor</string>
-    <string name="companybtn">Company</string>
+    <string name="companybtn">StartUp</string>
     <string name="company_requests">Company Requests</string>
     <string name="sponsor_requests">Sponsor Requests</string>
     <string name="contact_company">Contact Company</string>

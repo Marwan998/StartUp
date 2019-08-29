@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".StartupMain"></activity>
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".StartupMain" />
         <activity android:name=".SponsorMain" />
         <activity android:name=".searchSponsor" />
         <activity android:name=".Gov_Messages" />
@@ -18,13 +25,7 @@
         <activity android:name=".RegisterSponsor" />
         <activity android:name=".RegisterCompany" />
         <activity android:name=".Login" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".Spon_Messages" />
         <activity android:name=".seeGovermentAds" />
     </application>
