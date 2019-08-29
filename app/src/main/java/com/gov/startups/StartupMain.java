@@ -6,7 +6,11 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class StartupMain extends AppCompatActivity {
 
@@ -24,5 +28,13 @@ public class StartupMain extends AppCompatActivity {
 
     public void contact(View view) {
         view.setBackgroundResource(R.drawable.btn_design_clicked);
+        final Button temp = (Button)view;
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                temp.setBackgroundResource(R.drawable.btn_design);
+            }
+        },500);
     }
 }
