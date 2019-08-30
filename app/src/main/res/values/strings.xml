@@ -10,4 +10,5 @@
     <string name="new_announcement">New Announcement</string>
     <string name="search_company">Search Company</string>
     <string name="search_sponsor">Search Sponsor</string>
+    <string name="transaction">By clicking the button below you will be redirected to the government official website which contains info about all the government transactions.</string>
 </resources>

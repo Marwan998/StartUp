@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".gov_transactions"></activity>
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +26,7 @@
         <activity android:name=".RegisterSponsor" />
         <activity android:name=".RegisterCompany" />
         <activity android:name=".Login" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <activity android:name=".Spon_Messages" />
         <activity android:name=".seeGovermentAds" />
     </application>

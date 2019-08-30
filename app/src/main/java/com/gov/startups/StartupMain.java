@@ -2,6 +2,7 @@ package com.gov.startups;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Display;
@@ -39,5 +40,31 @@ public class StartupMain extends AppCompatActivity {
     }
     public void back(View view) {
         finish();
+    }
+
+    public void ads(View view) {
+        view.setBackgroundResource(R.drawable.btn_design_clicked);
+        startActivity(new Intent(StartupMain.this,seeGovermentAds.class));
+        final Button temp = (Button)view;
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                temp.setBackgroundResource(R.drawable.btn_design);
+            }
+        },500);
+    }
+
+    public void transactions(View view) {
+        view.setBackgroundResource(R.drawable.btn_design_clicked);
+        startActivity(new Intent(StartupMain.this,gov_transactions.class));
+        final Button temp = (Button)view;
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                temp.setBackgroundResource(R.drawable.btn_design);
+            }
+        },500);
     }
 }
