@@ -114,7 +114,7 @@ public class RegisterSponsor extends AppCompatActivity implements OnClickListene
                 if(!invalid){
                     Map<String, Object> sponsor = new HashMap<>();
                     sponsor.put("ID",uname);
-                    sponsor.put("password",pass);
+                    sponsor.put("Password",pass);
                     sponsor.put("name",fname);
                     sponsor.put("email",email);
                     sponsor.put("phone",phone);
