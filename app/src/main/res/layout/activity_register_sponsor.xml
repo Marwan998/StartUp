@@ -90,6 +90,23 @@
             android:inputType="textEmailAddress"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+        <EditText
+            android:id="@+id/ephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
 
 
 
