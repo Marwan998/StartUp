@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,6 +23,9 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import org.w3c.dom.Text;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Login extends AppCompatActivity {
 
@@ -59,6 +63,7 @@ public class Login extends AppCompatActivity {
     }
     String path="Companies";
     public void login(View view) {
+        view.setBackgroundResource(R.drawable.btn_design_clicked);
         EditText et = findViewById(R.id.editText);
         final String name = et.getText().toString();
         final EditText et2 = findViewById(R.id.editText2);
@@ -119,6 +124,14 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+        final Button temp = (Button)view;
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                temp.setBackgroundResource(R.drawable.btn_design);
+            }
+        },500);
     }
 
     public void register(View view) {
