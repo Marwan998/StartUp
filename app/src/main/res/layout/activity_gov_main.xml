@@ -19,6 +19,7 @@
         android:text="Companies"
         android:textAlignment="textStart"
         android:textAllCaps="false"
+        android:onClick="companyReq"
         android:textSize="12sp"/>
 
     <Button

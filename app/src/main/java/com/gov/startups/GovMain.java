@@ -77,4 +77,18 @@ public class GovMain extends AppCompatActivity {
     public void back(View view) {
         finish();
     }
+
+    public void companyReq(View view) {
+        view.setBackgroundResource(R.drawable.btn_design_clicked);
+        Intent intent = new Intent(GovMain.this,Company_Requests.class);
+        startActivity(intent);
+        final Button temp = (Button)view;
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                temp.setBackgroundResource(R.drawable.btn_design);
+            }
+        },500);
+    }
 }
