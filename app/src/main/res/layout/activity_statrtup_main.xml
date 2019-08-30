@@ -57,6 +57,7 @@
 
     <Button
         android:id="@+id/button10"
+        android:tag="gov"
         android:layout_width="175dp"
         android:layout_height="30dp"
         android:layout_below="@id/textView2"
@@ -73,6 +74,7 @@
 
     <Button
         android:id="@+id/button11"
+        android:tag="spn"
         android:layout_width="175dp"
         android:layout_height="30dp"
         android:layout_below="@id/button10"
@@ -84,6 +86,7 @@
         android:textSize="12sp"
         android:textAllCaps="false"
         android:textAlignment="textStart"
+        android:onClick="contact"
         android:paddingStart="10dp"/>
 
     <TextView

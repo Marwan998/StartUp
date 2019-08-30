@@ -29,6 +29,15 @@ public class StartupMain extends AppCompatActivity {
 
     public void contact(View view) {
         view.setBackgroundResource(R.drawable.btn_design_clicked);
+        Intent intent = new Intent(getApplicationContext(),Startup_Messages.class);
+        intent.putExtra("name",getIntent().getStringExtra("name"));
+        if(view.getTag().toString().equals("gov")){
+            intent.putExtra("type",3);
+        }
+        else{
+            intent.putExtra("type",2);
+        }
+        startActivity(intent);
         final Button temp = (Button)view;
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
