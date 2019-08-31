@@ -8,9 +8,13 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,11 +35,26 @@ public class supportRequest extends AppCompatActivity {
         EditText employees = findViewById(R.id.empl);
         EditText why = findViewById(R.id.why);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        Map<Object, Object> request = new HashMap<>();
+        final Map<Object, Object> request = new HashMap<>();
         request.put("ID",getIntent().getStringExtra("name"));
         request.put("budget",budget.getText().toString());
         request.put("employees",employees.getText().toString());
         request.put("why",why.getText().toString());
+        db.collection("Companies")
+                .whereEqualTo("name", getIntent().getStringExtra("name"))
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                request.put("phone",document.get("Phone").toString());
+                                request.put("email",document.get("email").toString());
+                            }
+                        } else {
+                        }
+                    }
+                });
         db.collection("Support_Requests").document().set(request)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -59,5 +78,8 @@ public class supportRequest extends AppCompatActivity {
         budget.setText("");
         employees.setText("");
         why.setText("");
+    }
+
+    public void next(View view) {
     }
 }

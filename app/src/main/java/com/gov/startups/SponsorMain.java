@@ -108,4 +108,18 @@ public class SponsorMain extends AppCompatActivity {
     public void back(View view) {
         finish();
     }
+
+    public void viewReq(View view) {
+        view.setBackgroundResource(R.drawable.btn_design_clicked);
+        Intent intent = new Intent(SponsorMain.this,View_Requests.class);
+        startActivity(intent);
+        final Button temp = (Button)view;
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                temp.setBackgroundResource(R.drawable.btn_design);
+            }
+        },500);
+    }
 }

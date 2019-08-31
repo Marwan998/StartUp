@@ -135,6 +135,7 @@
         android:text="Support requests"
         android:textAlignment="textStart"
         android:textAllCaps="false"
+        android:onClick="viewReq"
         android:textSize="12sp"/>
 
     <ImageView

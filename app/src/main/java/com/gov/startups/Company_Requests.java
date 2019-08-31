@@ -137,13 +137,13 @@ public class Company_Requests extends AppCompatActivity {
     public void accept(View view) {
         Map<String, Object> startup = new HashMap<>();
         startup.put("ID",list.get(idx).get(2).toString());
-        startup.put("Name",list.get(idx).get(1).toString());
+        startup.put("name",list.get(idx).get(1).toString());
         startup.put("Password",list.get(idx).get(6).toString());
         startup.put("email",list.get(idx).get(7).toString());
         startup.put("location",list.get(idx).get(3).toString());
         startup.put("equity",list.get(idx).get(4).toString());
         startup.put("goal",list.get(idx).get(5).toString());
-        startup.put("phone",list.get(idx).get(8).toString());
+        startup.put("Phone",list.get(idx).get(8).toString());
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Companies").document().set(startup)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
