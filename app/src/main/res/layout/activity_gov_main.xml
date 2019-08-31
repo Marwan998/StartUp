@@ -48,7 +48,7 @@
         android:background="@drawable/btn_design"
         android:fontFamily="@font/hel"
         android:paddingStart="10dp"
-        android:text="Government"
+        android:text="Company"
         android:textAlignment="textStart"
         android:textAllCaps="false"
         android:textSize="12sp"

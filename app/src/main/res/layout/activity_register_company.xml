@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/scrollView1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -13,6 +13,37 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:onClick="back"
+                app:srcCompat="@mipmap/back_icon" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imageButton"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:text="StartUp"
+                android:fontFamily="@font/hel"
+                android:textSize="30sp"
+                android:textColor="#E19E08"/>
+        </RelativeLayout>
+
         <TextView
             android:id="@+id/compname"
             android:layout_width="wrap_content"
@@ -20,6 +51,10 @@
             android:text="Company Name"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/hel"
+            android:textColor="#E19E08"
+            android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
@@ -43,6 +78,9 @@
             android:text="User Name"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:fontFamily="@font/hel"
+            android:textColor="#E19E08"
+            android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
@@ -61,6 +99,9 @@
             android:text="Company Location"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:fontFamily="@font/hel"
+            android:textColor="#E19E08"
+            android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
@@ -79,6 +120,9 @@
             android:text="Equity capital"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:fontFamily="@font/hel"
+            android:textColor="#E19E08"
+            android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
@@ -98,6 +142,9 @@
             android:text="Company goals"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:fontFamily="@font/hel"
+            android:textColor="#E19E08"
+            android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
@@ -116,6 +163,9 @@
             android:text="Password"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:fontFamily="@font/hel"
+            android:textColor="#E19E08"
+            android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
@@ -137,6 +187,9 @@
             android:text="Email"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:fontFamily="@font/hel"
+            android:textColor="#E19E08"
+            android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
@@ -155,6 +208,9 @@
             android:text="Phone Number"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:fontFamily="@font/hel"
+            android:textColor="#E19E08"
+            android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
@@ -182,6 +238,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Submit"
+                android:layout_marginStart="100dp"
+                android:background="@drawable/btn_design"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"/>
 
@@ -190,6 +248,8 @@
                 android:id="@+id/ccancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/btn_design"
+                android:layout_marginLeft="10dp"
                 android:text="Cancel"
                 android:layout_toRightOf="@id/csubmit"/>
 

@@ -138,6 +138,7 @@ public class RegisterCompany extends AppCompatActivity implements OnClickListene
                     startup.put("equity",equN+"");
                     startup.put("goal",goalN);
                     startup.put("phone",phoneN);
+                    startup.put("Logo","https://logosbynick.com/wp-content/uploads/2018/03/final-logo-example.png");
                     FirebaseFirestore db = FirebaseFirestore.getInstance();
                     db.collection("Company_Requests").document().set(startup)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {

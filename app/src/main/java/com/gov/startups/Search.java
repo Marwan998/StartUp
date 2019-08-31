@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -52,27 +53,35 @@ public class Search extends AppCompatActivity {
             @Override
             public void onTextChanged(final CharSequence charSequence, int i, int i1, int i2) {
                 CollectionReference data = db.collection(path);
-                data.orderBy("name").get()
+                data.orderBy("ID").get()
                         .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                             String query = charSequence.toString().toLowerCase();
                             @Override
                             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                                 if (task.isSuccessful()) {
                                     int c = 0;
-                                        ArrayList<String> arrayList = new ArrayList<>();
-                                        for (QueryDocumentSnapshot document : task.getResult()) {
-                                            String result = document.getData().get("name").toString().toLowerCase();
-                                            if (result.contains(query) && !(query.equals("") || query.equals(" "))) {
-                                                c++;
-                                                arrayList.add(result);
-                                                ArrayAdapter arrayAdapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, arrayList);
-                                                listView.setAdapter(arrayAdapter);
-                                            }
+                                    ArrayList<String> name =new ArrayList<>();
+
+                                    ArrayList<String> contactInfo =new ArrayList<>();
+
+                                    ArrayList<String> icon= new ArrayList<>();
+
+                                    for (QueryDocumentSnapshot document : task.getResult()) {
+                                        String id = document.getData().get("ID").toString().toLowerCase();
+                                        String logo = document.getData().get("Logo").toString();
+                                        String phone = document.getData().get("Phone").toString();
+                                        if (id.contains(query) && !(query.equals("") || query.equals(" "))) {
+                                            c++;
+                                            name.add(id);
+                                            contactInfo.add(phone);
+                                            icon.add(logo);
+                                            MyListAdapter adapter=new MyListAdapter(getApplicationContext(),name,contactInfo,icon);
+                                            listView.setAdapter(adapter);
                                         }
-                                        if(c==0){
-                                            ArrayList<String> ar = new ArrayList<>();
-                                            ArrayAdapter arrayAdapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, ar);
-                                            listView.setAdapter(arrayAdapter);}
+                                    }
+                                    if(c==0){
+                                        MyListAdapter adapter=new MyListAdapter(getApplicationContext(),new ArrayList<String>(),new ArrayList<String>(),new ArrayList<String>());
+                                        listView.setAdapter(adapter);}
 
 
                                 }
@@ -90,4 +99,7 @@ public class Search extends AppCompatActivity {
         });
     }
 
+    public void back(View view) {
+        finish();
+    }
 }
