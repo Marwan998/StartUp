@@ -141,6 +141,7 @@
         android:textStyle="bold"
         android:fontFamily="@font/hel"
         android:textSize="15sp"
+        android:onClick="support"
         />
 
     <ImageView
@@ -151,7 +152,8 @@
         android:layout_below="@id/button13"
         android:layout_marginTop="25dp"
         android:layout_marginStart="7dp"
-        android:src="@mipmap/financial_support_icon" />
+        android:src="@mipmap/financial_support_icon"
+        />
 
     <ImageView
         android:id="@+id/imageView2"

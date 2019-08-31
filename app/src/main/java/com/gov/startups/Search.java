@@ -28,11 +28,20 @@ public class Search extends AppCompatActivity {
     int type = -1;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     ListView listView;
+    String path;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         type = getIntent().getIntExtra("type",-1);
+        switch (type){
+            case 1:
+                path="Companies";
+                break;
+            case 2:
+                path="Sponsors";
+                break;
+        }
         final EditText editText = findViewById(R.id.search_et);
         listView = findViewById(R.id.listView);
         editText.addTextChangedListener(new TextWatcher() {
@@ -42,8 +51,8 @@ public class Search extends AppCompatActivity {
 
             @Override
             public void onTextChanged(final CharSequence charSequence, int i, int i1, int i2) {
-                CollectionReference data = db.collection("Companies");
-                data.orderBy("ID").get()
+                CollectionReference data = db.collection(path);
+                data.orderBy("name").get()
                         .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                             String query = charSequence.toString().toLowerCase();
                             @Override
@@ -52,7 +61,7 @@ public class Search extends AppCompatActivity {
                                     int c = 0;
                                         ArrayList<String> arrayList = new ArrayList<>();
                                         for (QueryDocumentSnapshot document : task.getResult()) {
-                                            String result = document.getData().get("ID").toString().toLowerCase();
+                                            String result = document.getData().get("name").toString().toLowerCase();
                                             if (result.contains(query) && !(query.equals("") || query.equals(" "))) {
                                                 c++;
                                                 arrayList.add(result);

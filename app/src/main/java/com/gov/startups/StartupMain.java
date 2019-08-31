@@ -76,4 +76,10 @@ public class StartupMain extends AppCompatActivity {
             }
         },500);
     }
+
+    public void support(View view) {
+        Intent intent = new Intent(getApplicationContext(),supportRequest.class);
+        intent.putExtra("name",getIntent().getStringExtra("name"));
+        startActivity(intent);
+    }
 }
