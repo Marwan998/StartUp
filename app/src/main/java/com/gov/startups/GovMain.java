@@ -91,4 +91,18 @@ public class GovMain extends AppCompatActivity {
             }
         },500);
     }
+
+    public void sponsorReq(View view) {
+        view.setBackgroundResource(R.drawable.btn_design_clicked);
+        Intent intent = new Intent(GovMain.this,Sponsor_Requests.class);
+        startActivity(intent);
+        final Button temp = (Button)view;
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                temp.setBackgroundResource(R.drawable.btn_design);
+            }
+        },500);
+    }
 }

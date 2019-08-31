@@ -158,6 +158,7 @@ public class Company_Requests extends AppCompatActivity {
                         Toast.makeText(Company_Requests.this, "Registration failed", Toast.LENGTH_SHORT).show();
                     }
                 });
+        db.collection("Company_Requests").document(list.get(idx).get(0).toString()).delete();
         EditText comtxt = (EditText)findViewById(R.id.rcomptxt);
         EditText loctxt = (EditText)findViewById(R.id.rloctxt);
         EditText equttxt = (EditText)findViewById(R.id.requtxt);
