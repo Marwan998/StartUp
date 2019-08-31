@@ -1,6 +1,7 @@
 package com.gov.startups;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -46,5 +47,13 @@ public class Spon_Messages extends AppCompatActivity {
             }
         });
 
+    }
+    public void newMessage(View view) {
+        messageDialogSponsor md = new messageDialogSponsor(Spon_Messages.this,type,getIntent().getStringExtra("name"));
+        md.show();
+    }
+
+    public void back(View view) {
+        finish();
     }
 }
